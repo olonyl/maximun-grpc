@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calculator;
+
+message FindMaximunRequest {
+	int32 value = 1;
+}
+
+message FindMaximunReponse {
+	int32 result = 1;
+}
+
+service CalculatorService {
+	rpc FindMaximun(stream FindMaximunRequest) returns (stream FindMaximunReponse) {}
+}
